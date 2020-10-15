@@ -1,12 +1,10 @@
-import configureStore from './store/configureStore';
+import store from './store/configureStore';
 import { bugAdded, bugResolved, bugRemoved, getUnresolvedBugs, bugAssignedToUser, getBugsByUser } from './store/bugs';
 import { projectAdded } from './store/projects'
 import { userAdded } from "./store/users"
 
-const store = configureStore()
 
 const unsubscribe = () => store.subscribe(() => console.log("Store has changed", store.getState()))
-
 unsubscribe()
 
 
